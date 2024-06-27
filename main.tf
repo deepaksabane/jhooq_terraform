@@ -5,7 +5,8 @@ resource "aws_instance" "deepu" {
     associate_public_ip_address = var.enable_public_ip
 
     tags = {
-      Name = var.Project_Environment["project"]
+      name = "terraform-Ec2"
+      project = var.Project_Environment["project"]
       Environment = var.Project_Environment["Environment"]
     }
 
